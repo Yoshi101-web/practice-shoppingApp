@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Item;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth; //ユーザーIDを取得するため
 
 class ItemController extends Controller
 {
@@ -40,7 +41,7 @@ class ItemController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        
     }
 
     /**
@@ -51,7 +52,8 @@ class ItemController extends Controller
      */
     public function show(Item $item)
     {
-        //
+        return view('item/
+        show', compact('item'));
     }
 
     /**
